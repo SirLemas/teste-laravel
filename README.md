@@ -1,15 +1,9 @@
 <h1>Docker para Utilizar com o Laravel</h1>
 
-<p> Esse projeto foi feito com inspiração em um projeto do Welliton Cunha onde ele faz um Docker para o laravel utilizando Nginx, Postgres, PHP e Composer, o que eu fiz foi só alterar algumas coisinhas referentes ao banco, onde nesse exemplo eu utilizo o MySQL ao invés do Postgres e alguns arquivos de configuração do Dockerfile.
-<br/>
-<a href="https://www.youtube.com/watch?v=dNw0M2ciZAE">Video do Welliton </a>
-</p>
-
 <h1>Lista de coisas que devem ser feitas após clonar este repositório:</h1>
 
 <ol>
-  <li>Crie uma pasta chamada <strong>src</strong> na raiz deste docker, pois é onde irá ficar o projeto laravel quando você for criá-lo do zero ou se quiser baixar de algum lugar, fique a vontade;</li>
-  <li>Depois de feito o passo anterior, execute o comando Make build para baixar os containers do docker e logo após subir a aplicação;</li>
+  <li>Execute o comando Make build para baixar os containers do docker e logo após subir a aplicação;</li>
   <li>Depois de subir e se quiser conferir é só ir na URL e digitar localhost:7000 que seu projeto estará já rodando localmente;</li>
   <li>Para executar comandos referentes ao laravel, execute Make php para entrar no container e lá dentro você conseguirá executar os comandos normalmente para criar controllers, migrations e etc.</li>
 </ol>
