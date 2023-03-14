@@ -18,3 +18,7 @@
 <br/>
 <h1>Dica</h1>
 <p>Caso queira saber mais, abre o arquivo Makefile e da uma olhadinha nos alias que está criado e você pode adicionar e remover os comandos para o jeito que você quiser, porém deixei os mais utilizados normalmente quando se trabalha com um docker simples!</p>
+
+<h1>Sobre a API</h1>
+<br/>
+<p>Depois de subir o docker (caso você use ele), vai está em pé na porta 7000, então para acessar os endpoints você precisa utilizar: http://localhost:7000/api/ e o nome das rotas que se encontram no arquivo API.</p>
