@@ -20,13 +20,13 @@ class CadastroController extends Controller
 
         return response()->json($registros, 200);
     }
-    
+
     public function registrar(CadastroStoreRequest $request)
-    {  
+    {
         if (!isset($request->colaborador) || empty($request->colaborador)) {
             return response()->json('Erro na requisicao, por favor verificar os dados', 400);
-        } 
-    
+        }
+
         if ($request->validated()) {
             $colaborador = Cadastro::create($request->colaborador);
             return response()->json($colaborador, 201);
@@ -35,10 +35,10 @@ class CadastroController extends Controller
 
     public function validar(Request $request, $id)
     {
-        
+
         if (!isset($request->colaborador) || empty($request->colaborador)) {
             return response()->json('Erro na requisicao, por favor verificar os dados', 400);
-        } 
+        }
 
         $colaborador = Cadastro::where('id', $id)->first();
 
@@ -51,6 +51,14 @@ class CadastroController extends Controller
         $colaborador->save();
 
         return response()->json('Cliente validado com sucesso!', 201);
+    }
 
+    public function getColaborador($id) {
+        $colaborador = Cadastro::where('id', $id)->first();
+        if (empty($colaborador)) {
+            return response()->json('Colaborador nao encontrado', 404);
+        }
+
+        return response()->json($colaborador, 201);
     }
 }

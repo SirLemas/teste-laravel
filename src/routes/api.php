@@ -20,4 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('registrar', 'App\Http\Controllers\Api\CadastroController@registrar');
 Route::get('registros', 'App\Http\Controllers\Api\CadastroController@registros');
-Route::post('validar/{id}', 'App\Http\Controllers\Api\CadastroController@validar');
+Route::post('validar/{id}', 'App\Http\Controllers\Api\CadastroController@validar')->where('id', '[0-9]+');
+Route::get('colaborador/{id}', 'App\Http\Controllers\Api\CadastroController@getColaborador')->where('id', '[0-9]+');
